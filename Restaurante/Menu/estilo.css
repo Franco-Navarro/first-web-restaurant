@@ -1,0 +1,266 @@
+:root {
+    --color-principal: #e4b98b;
+    --color-menu: rgb(0, 0, 0);
+    --color-hover: #bb002f;
+    --color-background: rgb(48, 51, 58);
+}
+
+* {
+    scroll-behavior: smooth;
+    /*font-family: 'Open Sans', sans-serif;*/
+    /*font-family: 'Khula', sans-serif;
+    font-family: 'Ballet', cursive;
+    font-family: 'Newsreader', serif;
+    font-family: 'Lora', serif;*/
+}
+
+
+body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 1fr 70px;
+    background: var(--color-background);
+}
+
+/*  Header  */
+
+.header {
+    grid-row: 1/2;
+    background: var(--color-principal);
+}
+
+.header__container {
+    display: flex;
+    width: 1000px;
+    margin: auto;
+}
+
+/*  Header Logo    */
+
+.header__container-logo {
+    display: flex;
+    padding-top: 10px;
+}
+
+.header__container-logo img {
+    height: 80px;
+    width: 80px;
+}
+
+.header__container img:hover {
+    filter: brightness(.8);
+}
+
+/* Header Nav */
+
+.header__container-nav {
+    display: flex;
+    position: relative;
+    margin: auto;
+    text-align: right;
+}
+
+.header__nav {
+    position: relative;
+    left: 150px;
+}
+
+.header__nav-a {
+    display: inline-block;
+    margin: auto;
+    text-decoration: none;
+    color: var(--color-menu);
+    text-align: center;
+    padding: 10px 25px 0 25px;
+    font-size: 28px;
+    font-family: 'Khula', sans-serif;
+    font-weight: 600;
+}
+
+.header__nav-a i {
+    padding: 10px;
+    font-size: 25px;
+}
+
+/*  Nav Hover*/
+
+.header__nav-a:hover {
+    text-decoration: underline 3px var(--color-hover);
+    transition: .3s;
+}
+
+
+.header__nav-a:hover>i {
+    color: var(--color-hover);
+    transition: .3s;
+}
+
+
+
+/*  Main    */
+
+.article {
+    grid-row: 2/3;
+}
+
+/*  Main Banner */
+
+.article__banner {
+    display: inline-block;
+    height: 250px;
+    width: 100%;
+    clip-path: polygon(0% 0%, 100% 0, 100% 100%, 50% 100%, 0 100%);
+}
+
+.article__banner-img {
+    position: absolute;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    top: -100px;
+}
+
+.article__banner-title {
+    position: relative;
+    display: inline-block;
+    text-align: left;
+    margin: auto;
+    left: 100px;
+}
+
+/*  Main Banner Text */
+
+.article__banner-h1 {
+    position: relative;
+    font-family: 'Lora', serif;
+    font-weight: 500;
+    font-size: 70px;
+    color: var(--color-principal);
+    top: 35px;
+}
+
+/*  Main Lists  */
+
+.article__menu {
+    position: relative;
+    padding-left: 100px;
+    padding-top: 30px;
+
+}
+
+.article__menu-container {
+    margin: 40px;
+    width: 800px;
+    border-bottom: solid 3px var(--color-principal);
+}
+
+.article__menu-container-h3 {
+    width: 100%;
+    margin: 20px 0;
+    font-family: 'Lora', serif;
+    font-weight: 500;
+    font-size: 30px;
+    color: var(--color-principal);
+    text-decoration: underline 2px var(--color-principal);
+}
+
+.article__menu-container-ul {
+    width: 800px;
+    padding: 10px;
+}
+
+.article__menu-container-ul li {
+    width: 800px;
+    font-family: 'Lora', serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: var(--color-principal);
+    padding: 5px;
+}
+
+.article__menu-container-ul li b {
+    font-weight: 600;
+}
+
+
+/* Main reserv*/
+
+.article__reserve {
+    text-align: center;
+    padding: 30px 0 60px 0;
+}
+
+.article__reserve-a {
+    font-family: 'Lora', serif;
+    font-weight: 500;
+    font-size: 70px;
+    color: var(--color-principal);
+    text-decoration: none;
+    padding: 30px;
+}
+
+.article__reserve-a:hover {
+    color: var(--color-hover);
+    transition: .3s;
+    text-decoration: underline 4px var(--color-hover);
+}
+
+/*  Footer  */
+
+.footer {
+    grid-row: 3/4;
+    background: var(--color-principal);
+}
+
+/*  Footer Icon Social */
+
+.footer__redes {
+    position: relative;
+    display: inline-block;
+    text-align: left;
+    left: 47%;
+}
+
+.footer__redes-a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 5px;
+}
+
+.footer__redes-a i {
+    color: #000;
+    font-size: 40px;
+}
+
+.footer__redes-a i:hover {
+    color: var(--color-hover);
+    transition: .3s;
+}
+
+/*  Footer Icon BackHome */
+
+.footer__home {
+    position: relative;
+    display: inline-block;
+    border-radius: 100rem;
+    left: 83%;
+    top: -25px;
+    background: var(--color-principal);
+    padding: 10px 20px;
+}
+
+.footer__home a {
+    display: inline-block;
+    font-size: 40px;
+    text-decoration: none;
+    padding: 5px;
+}
+
+.footer__home i {
+    color: #000;
+}
+
+.footer__home i:hover {
+    color: var(--color-hover);
+    transition: .3s;
+}
